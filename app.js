@@ -4,6 +4,6 @@
 
 $(function() {
     $('.is-toggleBtn').on( 'click', function() {
-        $('.contents').find('.flex-container').toggleClass('add-style-flex');
+        $('.contents').find('.flex-container').toggleClass('add-container-flex');
     });
 });

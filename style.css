@@ -5,16 +5,18 @@ body {
     font-size: 18px;
     font-family: monospace;
 }
+
 .introduction {
     margin-bottom: 30px;
 }
+
 .is-toggleBtn {
-    width: 100%;
     display: inline;
     margin-left: 10px;
-    padding: 20px;
+    padding: 10px 20px;
     font-weight: bold;
     border: 1px solid #ccc;
+    border-radius: 4px;
     cursor: pointer;
 }
 .is-toggleBtn:hover {
@@ -22,13 +24,41 @@ body {
     background-color: #f55;
 }
 
-.add-style-flex {
+.add-container-flex {
+    /* flex container に指定すると子要素の flex item が横並びになる */
     display: flex;
 }
+
+.add-container-flex-direction {
+    flex-direction: row;
+}
+
+.flex-container {
+}
+
+.flex-example-box02 .flex-container {
+    display: flex;
+    flex-direction: row;
+}
+.flex-example-box03 .flex-container {
+    display: flex;
+    flex-direction: column;
+}
+.flex-example-box04 .flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.flex-example-box05 .flex-container {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
 .flex-items01 {
-    /* width: calc(100%/6); */
     width: 100%;
     padding: 20px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 1px solid #fff;
+    background-color: yellowgreen;
+    box-sizing: border-box;
 }
