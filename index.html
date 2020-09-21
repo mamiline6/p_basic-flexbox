@@ -13,117 +13,265 @@
     <div>
         <h1 class="title-type01">flexbox 指定一覧</h1>
     </div>
-    <section>
+    <section class="contents-wrapper">
         <div>
             <h2 class="title-type02">1. display: flex;</h2>
         </div>
         <div class="contents">
-            <p class="introduction">親要素に「display: flex;」を指定すると、子要素の数に応じて親要素の幅を均等に分割かつ横伸縮する形で並ぶ。<!-- span class="is-toggleBtn">flexを指定する</span --></p>
-        <div class="code-preview-area">
-            <div class="flex-container">
-                <div class="flex-items">1</div>
-                <div class="flex-items">2</div>
-                <div class="flex-items">3</div>
-                <div class="flex-items">4</div>
-                <div class="flex-items">5</div>
-                <div class="flex-items">6</div>
+            <p class="introduction">display: flex;を指定した要素がフレックスコンテナーになります。また、フレックスコンテナー直下のすべての要素がフレックスアイテムになります（フレックスアイテム内の要素はフレックスアイテムにならない点に注意）。</p>
+            <div class="content-example">
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example01">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
             </div>
-        </div>
-            <div class="code-area">
-                <pre>
-                    <code class="type-html">
-        // html
-        &lt;div class="flex-container"&gt;
-            &lt;div class="flex-items"&gt;1&lt;/div&gt;
-            &lt;div class="flex-items"&gt;2&lt;/div&gt;
-            &lt;div class="flex-items"&gt;3&lt;/div&gt;
-            &lt;div class="flex-items"&gt;4&lt;/div&gt;
-            &lt;div class="flex-items"&gt;5&lt;/div&gt;
-            &lt;div class="flex-items"&gt;6&lt;/div&gt;
-        &lt;/div>
-                    </code>
-                    <code class="type-css">
-        /* css */
-        .flex-container {
-            display: flex;
-        }
-                    </code>
-                </pre>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-html">
+            &lt;!-- html --&gt;
+            &lt;div class="flex-container"&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム1&lt;/div&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム2&lt;/div&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム3&lt;/div&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム4&lt;/div&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム5&lt;/div&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム6&lt;/div&gt;
+            &lt;/div>
+                        </code>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+            }
+                        </code>
+                    </pre>
+                </div>
             </div>
         </div>
     </section>
-<hr>
-<section class="flex-example-box02">
-    <div class="title-type01">
-        <h1>2. flex-direction（横並びと縦並び） 指定方法</h1>
-    </div>
-    <div class="contents">
-        <p class="introduction">親要素 flex-container に「flex-direction: row」を指定する（初期値）。</p>
 
-        <div class="flex-container">
-            <div class="flex-items01">1</div>
-            <div class="flex-items01">2</div>
-            <div class="flex-items01">3</div>
-            <div class="flex-items01">4</div>
-            <div class="flex-items01">5</div>
-            <div class="flex-items01">6</div>
+    <section class="contents-wrapper">
+        <div>
+            <h2 class="title-type02">2. flexコンテナ向け：flex-directionプロパティ4種類</h2>
         </div>
-    </div>
-</section>
-<hr>
-<section class="flex-example-box03">
-    <div class="title-type01">
-        <h1>2. flex-direction（横並びと縦並び） 指定方法</h1>
-    </div>
-    <div class="contents">
-        <p class="introduction">親要素 flex-container に「flex-direction: column」を指定する。するとflexアイテムは上から下へ垂直方向に配置される。</p>
+        <div class="contents">
+            <p class="introduction">横・縦並びの方向（direction）を指定する flex-direction プロパティ。フレックスコンテナーに指定し、フレックスアイテムの配置順を設定する</p>
 
-        <div class="flex-container">
-            <div class="flex-items01">1</div>
-            <div class="flex-items01">2</div>
-            <div class="flex-items01">3</div>
-            <div class="flex-items01">4</div>
-            <div class="flex-items01">5</div>
-            <div class="flex-items01">6</div>
-        </div>
-    </div>
-</section>
-<hr>
-<section class="flex-example-box04">
-    <div class="title-type01">
-        <h1>2. flex-direction（横並びと縦並び） 指定方法</h1>
-    </div>
-    <div class="contents">
-        <p class="introduction">親要素 flex-container に「flex-direction: row-reverse」を指定する。するとflexアイテムはrowと逆、右から左へ水平方向に配置される。</p>
+            <div class="content-example">
+                <h3 class="title-type03">2-1. flex-direction: row（初期値）：左から右へ（ltr）水平方向に配置</h3>
+                <p>flexアイテムが左から右へ水平配置されます。</p>
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example02-1">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                flex-direction: row; /* 初期値（横並び行）省略可能 */ 
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
 
-        <div class="flex-container">
-            <div class="flex-items01">1</div>
-            <div class="flex-items01">2</div>
-            <div class="flex-items01">3</div>
-            <div class="flex-items01">4</div>
-            <div class="flex-items01">5</div>
-            <div class="flex-items01">6</div>
-        </div>
-    </div>
-</section>
-<hr>
-<section class="flex-example-box05">
-    <div class="title-type01">
-        <h1>2. flex-direction（横並びと縦並び） 指定方法</h1>
-    </div>
-    <div class="contents">
-        <p class="introduction">親要素 flex-container に「flex-direction: column-reverse」を指定する。するとflexアイテムはcolumnと逆、下から上へ垂直方向に配置される。</p>
+            <div class="content-example">
+                <h3 class="title-type03">2-2. flex-direction: row-reverse：rowと逆、右から左へ（rtl）水平方向に配置</h3>
+                <p>flexアイテムが右から左へ水平配置されます。</p>
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example02-2">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                flex-direction: row-reverse; /* 横並び行を逆順 */
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
 
-        <div class="flex-container">
-            <div class="flex-items01">1</div>
-            <div class="flex-items01">2</div>
-            <div class="flex-items01">3</div>
-            <div class="flex-items01">4</div>
-            <div class="flex-items01">5</div>
-            <div class="flex-items01">6</div>
+            <div class="content-example">
+                <h3 class="title-type03">2-3. flex-direction: column：縦並び列に配置</h3>
+                <p>flexアイテムが上から下へ垂直配置されます。</p>
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example02-3">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                flex-direction: column; /* 縦並び列 */
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">2-4. flex-direction: column-reverse：columnと逆、下から上へ垂直方向に配置</h3>
+                <p>flexアイテムが下から上へ垂直配置されます。</p>
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example02-4">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                flex-direction: column-reverse; /* 縦並び列の逆順 */
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
+    <section class="contents-wrapper">
+        <div>
+            <h2 class="title-type02">3. flexコンテナ向け：flex-wrapプロパティ3種類</h2>
+        </div>
+        <div class="contents">
+            <p class="introduction">flexコンテナが複数のアイテムを一行、または複数行に配置することをコントロールする</p>
+
+            <div class="content-example">
+                <h3 class="title-type03">3-1. flex-wrap: nowrap（初期値）</h3>
+                <p>flexアイテムを単一行に配置、flexコンテナ幅に収まるように縮小される。</p>
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example03-1">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                flex-wrap: nowrap; /* 初期値 省略可能 */ 
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">3-2. flex-wrap: wrap</h3>
+                <p>flexアイテムを複数行に配置、左から右へ、上から下へ、の順番に。</p>
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example03-2">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                        <div class="flex-items">フレックスアイテム11</div>
+                        <div class="flex-items">フレックスアイテム12</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap; /* flexアイテムを複数行に配置 */
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">3-3. flex-wrap: wrap-reverse</h3>
+                <p>複数行に配置、左から右へ、下から上へ、の順番に</p>
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example03-3">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                        <div class="flex-items">フレックスアイテム11</div>
+                        <div class="flex-items">フレックスアイテム12</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap-reverse;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </section>
 
 </body>
