@@ -272,7 +272,7 @@
         </div>
     </section>
 
-    <section class="contents-wrapper">
+    <section class="contents-wrapper" style="display: none;">
         <div>
             <h2 class="title-type02">4. flexコンテナ向け：justify-content プロパティ7種</h2>
         </div>
@@ -482,6 +482,196 @@
                     </pre>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="contents-wrapper">
+        <div>
+            <h2 class="title-type02">5. flexコンテナ向け：align-items プロパティ5種類</h2>
+        </div>
+        <div class="contents">
+            <p class="introduction">flexアイテムはflexコンテナのクロス軸に垂直方向で配置できる（flexアイテム align-self で上書きもできる）。</p>
+
+            <div class="content-example">
+                <h3 class="title-type03">5-1. align-items: stretch; （初期値）</h3>
+                <p>flexアイテムをflexコンテンツの高さ（または幅）いっぱいに配置</p>
+
+
+                <h4 class="title-type04">flex-direction: row;（横）の場合、flexアイテムは「高さ」いっぱいに広がる</h4>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example05-1">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+
+                </div>
+
+                <h4 class="title-type04">flex-direction: column;（縦）の場合、flexアイテムは「幅」いっぱいに広がる</h4>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example05-1 type-column">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction: row;          初期値 省略可能 */ 
+                /* flex-wrap: nowrap;            初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                align-items: stretch;         /* 初期値 省略可能 */
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">5-2. aling-items: flex-start;</h3>
+                <p>flexアイテムをflexコンテンツの先頭にまとめて配置</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example05-2">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction: row;          初期値 省略可能 */ 
+                /* flex-wrap: nowrap;            初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                align-items: flex-start;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">5-3. align-items: flex-end;</h3>
+                <p>flexアイテムをflexコンテンツの後尾にまとめて配置</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example05-3">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction: row;          初期値 省略可能 */ 
+                /* flex-wrap: nowrap;            初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                align-items: flex-end;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">5-4. align-items: center;</h3>
+                <p>flexアイテムをflexコンテナ内の上下中央に配置</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example05-4">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction: row;          初期値 省略可能 */ 
+                /* flex-wrap: nowrap;            初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                align-items: center;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">5-5. align-items: baseline;</h3>
+                <p>flexアイテムをベースラインに沿って配置</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example05-5">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2<br>フレックスアイテム2<br>フレックスアイテム2<br>フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4<br>フレックスアイテム4<br>フレックスアイテム4<br>フレックスアイテム4<br>フレックスアイテム4<br>フレックスアイテム4<br>フレックスアイテム4<br>フレックスアイテム4<br>フレックスアイテム4<br>フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                    </div>
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction: row;          初期値 省略可能 */ 
+                /* flex-wrap: nowrap;            初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                align-items: baseline;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
         </div>
     </section>
 

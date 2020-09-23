@@ -59,9 +59,15 @@ p {
     padding-left: 20px;
     line-height: 1.8;
     color: #333;
-    /* background-color: #eee; */
     border-left: 5px solid yellowgreen;
 }
+.title-type04::before {
+    content: '▼';
+    margin-right: 10px;
+    font-size: 20px;
+    color: yellowgreen;
+}
+
 
 .content-example {
     margin-top: 100px;
@@ -72,6 +78,10 @@ p {
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+.code-preview-area:first-child {
+    margin-top: 0;
+}
+
 
 /* フレックスコンテナー */
 .flex-container {
@@ -139,6 +149,49 @@ p {
     /* flex-wrap: nowrap;   初期値・省略可能 */
     justify-content: stretch;
 }
+
+.flex-container-example05-1 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    /* justify-content: flex-start; 初期値・省略可能 */
+    align-items: stretch;        /* 初期値・省略可能 */
+}
+.flex-container-example05-1.type-column {
+    flex-direction: column;
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    /* justify-content: flex-start; 初期値・省略可能 */
+    align-items: stretch;        /* 初期値・省略可能 */
+}
+.flex-container-example05-2 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    /* justify-content: flex-start; 初期値・省略可能 */
+    align-items: flex-start;
+}
+.flex-container-example05-3 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    /* justify-content: flex-start; 初期値・省略可能 */
+    align-items: flex-end;
+}
+.flex-container-example05-4 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    /* justify-content: flex-start; 初期値・省略可能 */
+    align-items: center;
+}
+.flex-container-example05-5 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    /* justify-content: flex-start; 初期値・省略可能 */
+    align-items: baseline;
+}
+
 
 
 /* フレックスアイテム */
