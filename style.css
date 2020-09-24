@@ -192,6 +192,80 @@ p {
     align-items: baseline;
 }
 
+.flex-container-example06-1 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    flex-wrap: wraps;
+    /* justify-content: flex-start; 初期値・省略可能 */
+    /* align-items: stretch;        初期値・省略可能 */
+    align-content: stretch;      /* 初期値・省略可能 */
+}
+.flex-container-example6-1.type-column {
+    min-height: 300px;
+    flex-direction: column;
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; 初期値・省略可能 */
+    /* align-items: stretch;        初期値・省略可能 */
+    align-content: stretch;      /* 初期値・省略可能 */
+}
+.flex-container-example06-2 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; 初期値・省略可能 */
+    /* align-items: stretch;        初期値・省略可能 */
+    align-content: flex-start;
+}
+.flex-container-example06-3 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; 初期値・省略可能 */
+    /* align-items: stretch;        初期値・省略可能 */
+    align-content: flex-end;
+}
+.flex-container-example06-4 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; 初期値・省略可能 */
+    /* align-items: stretch;        初期値・省略可能 */
+    align-content: center;
+}
+    .flex-container-example06-5 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; 初期値・省略可能 */
+    /* align-items: stretch;        初期値・省略可能 */
+    align-content: space-between;
+}
+.flex-container-example06-6 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; 初期値・省略可能 */
+    /* align-items: stretch;        初期値・省略可能 */
+    align-content: space-around;
+}
+.flex-container-example06-7 {
+    min-height: 300px;
+    /* flex-direction: row;         初期値・省略可能 */
+    /* flex-wrap: nowrap;           初期値・省略可能 */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; 初期値・省略可能 */
+    /* align-items: stretch;        初期値・省略可能 */
+    align-content: space-evenly;
+}
+
+
 
 
 /* フレックスアイテム */

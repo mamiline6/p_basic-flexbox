@@ -485,7 +485,7 @@
         </div>
     </section>
 
-    <section class="contents-wrapper">
+    <section class="contents-wrapper" style="display: none;">
         <div>
             <h2 class="title-type02">5. flexコンテナ向け：align-items プロパティ5種類</h2>
         </div>
@@ -666,6 +666,299 @@
                 /* flex-wrap: nowrap;            初期値 省略可能 */
                 /* justify-content: flex-start;  初期値 省略可能 */
                 align-items: baseline;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contents-wrapper">
+        <div>
+            <h2 class="title-type02">6. flexコンテナ向け：align-content プロパティ7種類</h2>
+        </div>
+        <div class="contents">
+            <p class="introduction">justify-content に似ているが、クロス軸方向に揃えて配置</p>
+
+            <div class="content-example">
+                <h3 class="title-type03">6-1. align-content: stretch; （初期値）</h3>
+                <p>すべてのflexアイテムを等間隔に配置。サイズがautoであるアイテムはflexコンテンツに合わせて引き伸ばす</p>
+
+
+                <h4 class="title-type04">flex-direction: row;（横）の場合</h4>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example06-1">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                    </div>
+
+                </div>
+
+                <h4 class="title-type04">flex-direction: column;（縦）の場合</h4>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example6-1 type-column">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                    </div>
+
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                /* flex-wrap:       nowrap;      初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                align-contents:     stretch;  /* 初期値 省略可能 */
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">6-2. align-content: flex-start;</h3>
+                <p>flexアイテムを先頭に寄せて配置</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example06-2">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                    </div>
+
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                flex-wrap:          wrap;
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                align-content:      flex-start;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">6-3. align-content: flex-end;</h3>
+                <p>flexアイテムをflexコンテンツの後尾にまとめて配置</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example06-3">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                    </div>
+
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                flex-wrap:          wrap;
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                align-content:      flex-end;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">6-4. align-content: center;</h3>
+                <p>flexアイテムをクロス軸の中心に積み重なる</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example06-4">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                    </div>
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                flex-wrap:          wrap;
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                align-content:      center;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">6-5. align-items: space-between;</h3>
+                <p>flexアイテムをクロス軸の先頭と後尾は端に、残りは等間隔に配置</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example06-5">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                    </div>
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                flex-wrap:          wrap;
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                align-content:      space-between;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">6-6. align-items: space-around;</h3>
+                <p>flexアイテムを等間隔に配置、各アイテムの両クロス軸に半分のサイズの間隔。</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example06-6">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                    </div>
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                flex-wrap:          wrap;
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                align-content:      space-around;
+            }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="content-example">
+                <h3 class="title-type03">6-7. align-items: space-evenly;</h3>
+                <p>flexアイテムを等間隔に配置、各アイテムのクロス軸に垂直方向に同じサイズの間隔</p>
+                <div class="code-preview-area">
+
+                    <div class="flex-container flex-container-example06-7">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                        <div class="flex-items">フレックスアイテム9</div>
+                        <div class="flex-items">フレックスアイテム10</div>
+                    </div>
+                </div>
+
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                min-height: 300px;      /* コンテナーの高さを作る */
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                flex-wrap:          wrap;
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                align-content:      space-evenly;
             }
                         </code>
                     </pre>
