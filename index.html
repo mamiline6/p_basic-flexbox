@@ -14,9 +14,9 @@
         <h1 class="title-type01">flexbox 指定一覧</h1>
     </div>
 
-    <section class="contents-wrapper">
+    <section class="contents-wrapper" style="display: none;">
         <div>
-            <h2 class="title-type02">1.flexアイテム向け： order: &lt;integer&gt;;</h2>
+            <h2 class="title-type02">１.flexアイテム向け： order: &lt;integer&gt;;</h2>
         </div>
         <div class="contents">
             <p class="introduction">flexコンテナ内に配置されるflexアイテムの並ぶ順番を設定</p>
@@ -48,6 +48,11 @@
             /* css */
             .flex-container {
                 display: flex;
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                /* flex-wrap:       nowrap;      初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                /* align-contents:  stretch;     初期値 省略可能 */
             }
             /* 表示順：2 6 1 3 4 5 */
             .flex-container :nth-child(1) { order: -1; }
@@ -63,6 +68,52 @@
         </div>
     </section>
 
+    <section class="contents-wrapper">
+        <div>
+            <h2 class="title-type02">2.flexアイテム向け： flex-grow: &lt;number&gt;;</h2>
+        </div>
+        <div class="contents">
+            <p class="introduction">flexコンテナ内にスペースがある場合、flexアイテムの大きさを他のアイテムと比べて伸縮させる設定（マイナス値は無効）</p>
+            <div class="content-example">
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example08">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-html">
+            &lt;!-- html --&gt;
+            &lt;div class="flex-container"&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム1&lt;/div&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム2&lt;/div&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム3&lt;/div&gt;
+                &lt;div class="flex-items"&gt;フレックスアイテム4&lt;/div&gt;
+            &lt;/div>
+                        </code>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                /* flex-wrap:       nowrap;      初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                /* align-contents:  stretch;     初期値 省略可能 */
+            }
+            .flex-container :nth-child(1) { flex-grow: 1; }
+            .flex-container :nth-child(2) { flex-grow: 0; }
+            .flex-container :nth-child(3) { flex-grow: 2; }
+            .flex-container :nth-child(4) { flex-grow: 0; /* 初期値 */}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div style="display: none;">>
     <section class="contents-wrapper">

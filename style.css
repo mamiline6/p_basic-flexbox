@@ -285,3 +285,9 @@ p {
 .flex-container-example07 :nth-child(4) { order: 1; }
 .flex-container-example07 :nth-child(5) { order: 3; }
 .flex-container-example07 :nth-child(6) { order: -2; }
+
+.flex-container-example08 :nth-child(1) { flex-grow: 1; }
+.flex-container-example08 :nth-child(2) { flex-grow: 0; }
+.flex-container-example08 :nth-child(3) { flex-grow: 2; }
+.flex-container-example08 :nth-child(4) { flex-grow: 0; }
+
