@@ -281,21 +281,27 @@ p {
 
 .flex-container-example07 :nth-child(1) { order: -1; }
 .flex-container-example07 :nth-child(2) { order: -2; }
-.flex-container-example07 :nth-child(3) { order: 0; }
+.flex-container-example07 :nth-child(3) { /* order: 0; */ } /* 初期値・省略可能 */
 .flex-container-example07 :nth-child(4) { order: 1; }
 .flex-container-example07 :nth-child(5) { order: 3; }
 .flex-container-example07 :nth-child(6) { order: -2; }
 
 .flex-container-example08 :nth-child(1) { flex-grow: 1; }
-.flex-container-example08 :nth-child(2) { flex-grow: 0; }
+.flex-container-example08 :nth-child(2) { /* flex-grow: 0; */ } /* 初期値・省略可能 */
 .flex-container-example08 :nth-child(3) { flex-grow: 2; }
-.flex-container-example08 :nth-child(4) { flex-grow: 0; }
+.flex-container-example08 :nth-child(4) { /* flex-grow: 0; */ } /* 初期値・省略可能 */
 
 .flex-container-example09 :nth-child(1) { flex-shrink: 10; }
 .flex-container-example09 :nth-child(2) { flex-shrink: 5; }
-.flex-container-example09 :nth-child(3) { flex-shrink: 1; }
-.flex-container-example09 :nth-child(4) { flex-shrink: 0; }
-.flex-container-example09 :nth-child(5) { flex-shrink: 1; }
-.flex-container-example09 :nth-child(6) { flex-shrink: 1; }
+.flex-container-example09 :nth-child(3) { /* flex-shrink: 1; */ } /* 初期値・省略可能  */ 
+.flex-container-example09 :nth-child(4) { flex-shrink: 0; }       /* オリジナルサイズ  */ 
+.flex-container-example09 :nth-child(5) { /* flex-shrink: 1; */ } /* 初期値・省略可能  */ 
+.flex-container-example09 :nth-child(6) { /* flex-shrink: 1; */ } /* 初期値・省略可能  */ 
 .flex-container-example09 :nth-child(7) { flex-shrink: 15; }
 .flex-container-example09 :nth-child(8) { flex-shrink: 20; }
+
+.flex-container-example10 :nth-child(1) { flex-basis: auto; }
+.flex-container-example10 :nth-child(2) { flex-basis: auto; }
+.flex-container-example10 :nth-child(3) { flex-basis: 350px; }
+.flex-container-example10 :nth-child(4) { flex-basis: auto; }
+.flex-container-example10 :nth-child(5) { flex-basis: 50px; }

@@ -85,7 +85,7 @@
                 /* align-contents:  stretch;     初期値 省略可能 */
             }
             .flex-container :nth-child(1) { flex-grow: 1; }
-            .flex-container :nth-child(2) { flex-grow: 0; }
+            .flex-container :nth-child(2) { flex-grow: 0; /* 初期値 */}
             .flex-container :nth-child(3) { flex-grow: 2; }
             .flex-container :nth-child(4) { flex-grow: 0; /* 初期値 */}
                         </code>
@@ -135,6 +135,46 @@
             .flex-container :nth-child(6) { flex-shrink: 1; }
             .flex-container :nth-child(7) { flex-shrink: 15; }
             .flex-container :nth-child(8) { flex-shrink: 20; }
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contents-wrapper">
+        <div>
+            <h2 class="title-type02">4.flexアイテム向け： flex-basis: auto | &lt;width&gt;;</h2>
+        </div>
+        <div class="contents">
+            <p class="introduction">flexアイテムの幅（高さ）のサイズを指定。auto は初期値。</p>
+            <div class="content-example">
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example10">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                /* flex-wrap:       nowrap;      初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                /* align-contents:  stretch;     初期値 省略可能 */
+            }
+            .flex-container :nth-child(1) { flex-basis: auto; /* 初期値 */ }
+            .flex-container :nth-child(2) { flex-basis: auto; /* 初期値 */ }
+            .flex-container :nth-child(3) { flex-basis: 350px; }
+            .flex-container :nth-child(4) { flex-basis: auto; /* 初期値 */ }
+            .flex-container :nth-child(5) { flex-basis: 50px;  }
                         </code>
                     </pre>
                 </div>
