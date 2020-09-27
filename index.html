@@ -14,9 +14,9 @@
         <h1 class="title-type01">flexbox 指定一覧</h1>
     </div>
 
-    <section class="contents-wrapper" style="display: none;">
+    <section class="contents-wrapper">
         <div>
-            <h2 class="title-type02">１.flexアイテム向け： order: &lt;integer&gt;;</h2>
+            <h2 class="title-type02">1.flexアイテム向け： order: &lt;integer&gt;;</h2>
         </div>
         <div class="contents">
             <p class="introduction">flexコンテナ内に配置されるflexアイテムの並ぶ順番を設定</p>
@@ -33,17 +33,6 @@
                 </div>
                 <div class="code-area">
                     <pre>
-                        <code class="type-html">
-            &lt;!-- html --&gt;
-            &lt;div class="flex-container"&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム1&lt;/div&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム2&lt;/div&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム3&lt;/div&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム4&lt;/div&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム5&lt;/div&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム6&lt;/div&gt;
-            &lt;/div>
-                        </code>
                         <code class="type-css">
             /* css */
             .flex-container {
@@ -85,15 +74,6 @@
                 </div>
                 <div class="code-area">
                     <pre>
-                        <code class="type-html">
-            &lt;!-- html --&gt;
-            &lt;div class="flex-container"&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム1&lt;/div&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム2&lt;/div&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム3&lt;/div&gt;
-                &lt;div class="flex-items"&gt;フレックスアイテム4&lt;/div&gt;
-            &lt;/div>
-                        </code>
                         <code class="type-css">
             /* css */
             .flex-container {
@@ -108,6 +88,53 @@
             .flex-container :nth-child(2) { flex-grow: 0; }
             .flex-container :nth-child(3) { flex-grow: 2; }
             .flex-container :nth-child(4) { flex-grow: 0; /* 初期値 */}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contents-wrapper">
+        <div>
+            <h2 class="title-type02">3.flexアイテム向け： flex-shrink: &lt;number&gt;;</h2>
+        </div>
+        <div class="contents">
+            <p class="introduction">flexコンテナ内のflexアイテムが他のアイテムと比較してどれくらいを縮む（shrink）かを指定（マイナス直は無効）</p>
+            <div class="content-example">
+                <div class="code-preview-area">
+                    <div class="flex-container flex-container-example09">
+                        <div class="flex-items">フレックスアイテム1</div>
+                        <div class="flex-items">フレックスアイテム2</div>
+                        <div class="flex-items">フレックスアイテム3</div>
+                        <div class="flex-items">フレックスアイテム4</div>
+                        <div class="flex-items">フレックスアイテム5</div>
+                        <div class="flex-items">フレックスアイテム6</div>
+                        <div class="flex-items">フレックスアイテム7</div>
+                        <div class="flex-items">フレックスアイテム8</div>
+                    </div>
+                </div>
+                <div class="code-area">
+                    <pre>
+                        <code class="type-css">
+            /* css */
+            .flex-container {
+                display: flex;
+                /* flex-direction:  row;         初期値 省略可能 */ 
+                /* flex-wrap:       nowrap;      初期値 省略可能 */
+                /* justify-content: flex-start;  初期値 省略可能 */
+                /* align-items:     stretch;     初期値 省略可能 */
+                /* align-contents:  stretch;     初期値 省略可能 */
+            }
+            /* flexコンテナ内にflexアイテムが煽れないと変化なし */
+            .flex-container :nth-child(1) { flex-shrink: 10; }
+            .flex-container :nth-child(2) { flex-shrink: 5; }
+            .flex-container :nth-child(3) { flex-shrink: 1; /* 初期値 */ }
+            .flex-container :nth-child(4) { flex-shrink: 0; /* オリジナルサイズ */}
+            .flex-container :nth-child(5) { flex-shrink: 1; }
+            .flex-container :nth-child(6) { flex-shrink: 1; }
+            .flex-container :nth-child(7) { flex-shrink: 15; }
+            .flex-container :nth-child(8) { flex-shrink: 20; }
                         </code>
                     </pre>
                 </div>
