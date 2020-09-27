@@ -300,8 +300,15 @@ p {
 .flex-container-example09 :nth-child(7) { flex-shrink: 15; }
 .flex-container-example09 :nth-child(8) { flex-shrink: 20; }
 
-.flex-container-example10 :nth-child(1) { flex-basis: auto; }
-.flex-container-example10 :nth-child(2) { flex-basis: auto; }
+.flex-container-example10 :nth-child(1) { /* flex-basis: auto; */ } /* 初期値・省略可能  */ 
+.flex-container-example10 :nth-child(2) { /* flex-basis: auto; */ } /* 初期値・省略可能  */ 
 .flex-container-example10 :nth-child(3) { flex-basis: 350px; }
-.flex-container-example10 :nth-child(4) { flex-basis: auto; }
+.flex-container-example10 :nth-child(4) { /* flex-basis: auto; */ } /* 初期値・省略可能  */ 
 .flex-container-example10 :nth-child(5) { flex-basis: 50px; }
+
+.flex-container-example11 :nth-child(1) { align-self: auto; } /* 初期値・省略可能  */ 
+.flex-container-example11 :nth-child(2) { align-self: flex-start; }
+.flex-container-example11 :nth-child(3) { align-self: flex-end; }
+.flex-container-example11 :nth-child(4) { align-self: center; } 
+.flex-container-example11 :nth-child(5) { align-self: baseline; }
+.flex-container-example11 :nth-child(6) { align-self: stretch; }
