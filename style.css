@@ -270,7 +270,7 @@ p {
 
 /* フレックスアイテム */
 .flex-items {
-    padding: 20px;
+    /* padding: 20px; */
     text-align: center;
     border: 1px solid #fff;
     background-color: yellowgreen;
@@ -358,4 +358,48 @@ p {
 .flex-items img {
     width: 100%;
     height: auto;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝
+ * 実践
+ * ＝＝＝＝＝＝＝＝＝ */
+
+.flex-container-tutorial01 > * {
+    flex-grow: 1;
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝
+ * 実践：ORICON NEWS ヘッダー
+ * ＝＝＝＝＝＝＝＝＝ */
+
+ /* リセット関係 */
+form, select, option, input {
+    margin: 0;
+    padding: 0;
+}
+.social-icon__list {
+    list-style: none;
+}
+
+
+.flex-container-tutorial02 {
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+.logo a {
+    display: block;
+}
+.logo img {
+    vertical-align: bottom;
+}
+.social-icon__list {
+    display: flex;
+    padding-left: 0;
+}
+.social-icon__item {
+    margin-left: 10px;
 }
